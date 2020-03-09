@@ -20,5 +20,6 @@ services:
       - "9229:9229" # debug port
       - "9329:9329" # debug port
       - "3000:3000"
+      - "8080:8080"
     # logging:
     #   driver: none # Disable the log to console

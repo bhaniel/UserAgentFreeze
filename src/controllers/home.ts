@@ -7,7 +7,10 @@ let counter = 0;
  */
 export const index = (req: Request, res: Response) => {
     console.log(counter++);
-    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Content-Type', 'text/html');
+    console.log(req.headers);
     res.setHeader('Accept-Ch' , 'UA, Platform, Arch, Model, Mobile') 
-    res.send({ test : "test" , headers : req.headers })
+    res.setHeader('Accept-Ch-Lifetime' , '86400');
+    // res.send({ test : "test" , headers : req.headers })
+    res.end();
 };

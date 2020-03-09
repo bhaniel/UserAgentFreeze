@@ -39,12 +39,12 @@
     "jest:e2e:debug": "node --inspect-brk=0.0.0.0:9329 node_modules/jest/bin/jest.js --config e2e/jest-e2e.json --detectOpenHandles",
     "docker:start": "docker-compose up",
     "docker:stop": "docker-compose down && docker-compose kill",
-    "docker:bash": "docker exec -it worker_node bash",
-    "docker:watch:debug": "docker exec -it worker_node npm run watch:debug",
-    "docker:test": "docker exec -it worker_node npm run test:watch",
-    "docker:test:debug": "docker exec -it worker_node npm run test:debug",
-    "docker:test:e2e": "docker exec -it worker_node npm run test:e2e",
-    "docker:test:e2e:debug": "docker exec -it worker_node npm run test:e2e:debug",
+    "docker:bash": "docker exec -it user-agent bash",
+    "docker:watch:debug": "docker exec -it user-agent npm run watch:debug",
+    "docker:test": "docker exec -it user-agent npm run test:watch",
+    "docker:test:debug": "docker exec -it user-agent npm run test:debug",
+    "docker:test:e2e": "docker exec -it user-agent npm run test:e2e",
+    "docker:test:e2e:debug": "docker exec -it user-agent npm run test:e2e:debug",
     "doc": "typedoc --out docs src"
   },
   "lint-staged": {
