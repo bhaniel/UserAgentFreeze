@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  node:
+    # the name of our contianer 
+    container_name: 'user-agent'
+    # base image of node take 12 now
+    image: node
+    #invoke our shell script into the contianer 
+    command: "sh dev-local/dev-entrypoint.sh"
+    # command: [ "/bin/sh", "-c", "--", "while true; do sleep 30; done;" ]
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+    environment:
+      # set no proxy in case you need for example kafka
+      NO_PROXY: "kafka1"
+      NODE_TLS_REJECT_UNAUTHORIZED: "0"
+    ports:
+      - "9229:9229" # debug port
+      - "9329:9329" # debug port
+      - "3000:3000"
+    # logging:
+    #   driver: none # Disable the log to console
