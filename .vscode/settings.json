@@ -2,5 +2,8 @@
   "cSpell.words": [
     "kafkajs",
     "roundrobin"
-  ]
+  ],
+  "files.exclude": {
+    "**/.git": false
+  }
 }
